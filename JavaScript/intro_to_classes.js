@@ -16,3 +16,21 @@ console.log(student3)
 
 //Call certain things in a object
 console.log(student1.name)
+
+//Practice question: turn this into objects
+const rows = [
+    {"name": "Ana", "major": "InfoSci"},
+    {"name": "Jay", "major": "CS"},
+]
+
+//Method 1
+const place = []
+for (let i = 0; i < rows.length; i++) {
+    const student = new Student(rows[i].name, rows[i].major)
+    place.push(student) //Like append for python
+}
+console.log(place)
+
+//Method 2
+const array2 = rows.map(row => new Student(row.name, row.major))
+console.log(array2)

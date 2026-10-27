@@ -1,4 +1,4 @@
-#Testing programming
+#Lession one: classes
 
 class Student():
 
@@ -25,7 +25,7 @@ rows = [
 place = []
 for row in rows:
     student = Student(row['name'], row['major']) # first row is replaced
-    place.append(student.name)
-    place.append(student.major)
+    place.append(student)
+    
 print(place)
 
