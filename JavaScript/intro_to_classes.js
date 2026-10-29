@@ -34,3 +34,19 @@ console.log(place)
 //Method 2
 const array2 = rows.map(row => new Student(row.name, row.major))
 console.log(array2)
+
+
+
+//======================================= Lesson 2 Bridge
+class Student2 {
+    //Constructor is the setup
+    constructor(name, major) {
+        this.name = name
+        this.major = major
+    }
+    is_major() {
+        return this.major.filter("computer_science")
+    }
+}
+const student4 = new Student("student4", "computer_science")
+console.log(student4.is_major())

@@ -29,3 +29,18 @@ for row in rows:
     
 print(place)
 
+
+#################################### Lesson 2 Bridge
+class Student2():
+
+    def __init__(self, name, major):
+        self.name = name 
+        self.major = major
+
+    def is_major(self):
+        if self.major == "computer_science":
+            return True
+
+student4 = Student2("student4", "computer_science")
+
+print(f"Computer Science? | {student4.is_major()}")

@@ -31,3 +31,33 @@ const duneTs = new BookTs("Dune", 412) //name and pages
 duneTs.read(100)
 duneTs.read(50)
 console.log(duneTs.progress()) //36.4
+
+console.log("=================================")
+
+class BankAccountTs {
+    owner: string
+    balance: number = 0
+
+    constructor(owner: string) {
+        this.owner = owner
+        this.balance = 0
+    }
+    deposit(amount: number) {
+        this.balance = this.balance + amount
+    }
+    withdraw(amount: number) {
+        if (amount > this.balance) {
+            return false
+        }
+        else {
+            this.balance = this.balance - amount
+            return true
+        }
+
+    }
+}
+
+const jesse = new BankAccountTs("Jesse")
+jesse.deposit(50)
+jesse.withdraw(30)
+console.log(jesse)

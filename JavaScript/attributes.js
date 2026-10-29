@@ -33,8 +33,26 @@ console.log(dune)
 
 //Practice
 class BankAccount {
-    constructor(owner) {
+    constructor(owner, balance) {
         this.owner = owner
-        this.balance = balance 
+        this.balance = balance = 0
+
+    }
+    deposit(n) {
+        this.balance = this.balance + n
+    }
+    withdraw(n) {
+        if (n > this.balance) {
+            return false
+        }
+        else {
+            this.balance = this.balance - n
+            return true
+        }
     }
 }
+
+const brian = new BankAccount("Brian")
+brian.deposit(50)
+brian.withdraw(30)
+console.log(brian)

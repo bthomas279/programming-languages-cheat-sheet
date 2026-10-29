@@ -29,11 +29,11 @@ print(dune.pages_read)
 print(dune.progress())
 print(dune)
 print([dune])
-
+print("-"*30)
 ############################### Assignment
 class BankAccount:
 
-    def __init__(self, owner, balance):
+    def __init__(self, owner):
         self.owner = owner
         self.balance = 0
 
@@ -48,10 +48,10 @@ class BankAccount:
             return True
 
     def __repr__(self):
-        return f"BankAccount(Owner = {self.owner}, Balance = ${self.balance})"
+        return f"Bank Account info: (Owner = {self.owner}, Balance = ${self.balance})"
 
 
-user = BankAccount("User", 0)
+user = BankAccount("Dave")
 user.deposit(50)
 user.withdraw(20)
 print(user)
